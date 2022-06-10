@@ -3,12 +3,16 @@
 
 <ul>
     <li>ID: <%= @breed['id'] %></li>
-    <% if @breed['alt_names'].length != 0 %>
+    <% if !@breed['alt_names'].nil? %>
     <li>Nickname: <%= @breed['alt_names'] %></li>
     <% end %>
     <li>Origin: <%= @breed['origin'] %></li>
     <li>Energy level: <%= @breed['energy_level'] %> / 5</li>
     <li>Social needs: <%= @breed['social_needs'] %> / 5</li>
     <li>Temperament: <%= @breed['temperament'] %></li>
-
 </ul>
+
+
+<% if !@image.nil? %>
+<img src=<%=@image%> alt=<% @breed['name'] %> width="200">
+<% end %>

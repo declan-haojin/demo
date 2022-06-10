@@ -17,14 +17,11 @@ class Servicenow
                 'Accept-Encoding' => ''
             }
         )
-        conn.basic_auth(ENV['USERNAME'],ENV["KEY"])
+        conn.basic_auth(ENV['USERNAME'], ENV["KEY"])
 
         response = conn.get
-
-
         # return response
         JSON.parse(response.body)
-
 
     end
 end

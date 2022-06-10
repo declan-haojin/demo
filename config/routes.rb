@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get '/get_all_cats', to: 'example#get_all_cats'
   get '/get_a_cat', to: 'example#get_a_cat'
   get '/servicenow', to: 'example#servicenow'
-
+  get '/get_kanye_quote', to: 'example#get_kanye_quote'
 end
